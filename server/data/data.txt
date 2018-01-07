@@ -1,0 +1,101 @@
+stock|volume|price|dollarChange|pctChange
+General Electric (GE)|64701010|$17.59|-0.17|-0.96
+Bank of America (BAC)|62318474|29.45|-0.03|-0.10
+Twitter (TWTR)|44539746|25.08|0.40|1.62
+Sprint (S)|29230084|5.58|-0.02|-0.36
+Oracle (ORCL)|26400067|47.82|0.11|0.23
+Teva Pharmaceutical Industries ADR (TEVA)|25484925|17.90|-0.62|-3.35
+AT&T (T)|24905090|38.05|-0.41|-1.07
+McDermott International (MDR)|24328851|6.69|-0.90|-11.86
+Platform Specialty Products (PAH)|21995848|10.13|0.24|2.43
+CenturyLink (CTL)|21954308|17.40|-0.35|-1.97
+Ford Motor (F)|20124114|12.69|0.03|0.24
+Vipshop Holdings ADR (VIPS)|20055898|12.01|0.26|2.21
+Chesapeake Energy (CHK)|19223823|3.61|-0.08|-2.17
+Weatherford International (WFT)|18998293|3.63|0.03|0.83
+Alibaba Group Holding ADR (BABA)|18991128|171.28|-2.09|-1.21
+Chicago Bridge&Iron (CBI)|18930171|16.01|-1.91|-10.66
+Rite Aid (RAD)|18361366|1.93|0.01|0.52
+Nabors Industries (NBR)|18050134|6.05|0.33|5.77
+Cemex ADR (CX)|17889511|7.40|-0.08|-1.07
+Vale ADR (VALE)|17656486|11.56|0.01|0.09
+Southwestern Energy (SWN)|17460531|5.18|-0.11|-2.08
+Freeport-McMoRan (FCX)|17173531|17.33|-0.02|-0.12
+J.C. Penney (JCP)|16931156|3.04|-0.15|-4.70
+Citigroup (C)|16771766|74.70|-0.97|-1.28
+Wells Fargo (WFC)|16124791|60.36|-0.56|-0.92
+Kindred Healthcare (KND)|16055756|9.10|-0.40|-4.21
+Marathon Oil (MRO)|14172582|16.02|0.59|3.82
+Valeant Pharmaceuticals International (VRX)|13468204|20.86|-0.34|-1.60
+Pfizer (PFE)|13456059|36.94|-0.19|-0.51
+Oasis Petroleum (OAS)|12987541|7.87|-0.10|-1.25
+Spirit Realty Capital (SRC)|12501980|8.67|0.02|0.23
+Annaly Capital Management (NLY)|12366670|11.85|-0.33|-2.71
+Verizon Communications (VZ)|12064224|52.83|-0.42|-0.79
+General Motors (GM)|12043535|42.49|0.34|0.81
+Snap (SNAP)|11979979|15.77|-0.33|-2.05
+Square Cl A (SQ)|11950452|36.92|-0.83|-2.20
+First Data Cl A (FDC)|11755988|16.40|0.14|0.86
+CVS Health (CVS)|11684548|72.31|0.64|0.89
+Yamana Gold (AUY)|11620138|2.76|0.07|2.60
+AES (AES)|11595346|10.65|-0.30|-2.74
+JPMorgan Chase (JPM)|11538228|106.51|-0.45|-0.42
+ENSCO (ESV)|11531880|5.21|0.02|0.39
+Wal-Mart Stores (WMT)|11507928|98.80|0.90|0.92
+AK Steel Holding (AKS)|11346315|5.53|0.04|0.73
+VEREIT (VER)|11219794|7.85|-0.16|-2.00
+BlackBerry (BB)|10391063|10.87|-0.07|-0.64
+Regions Financial (RF)|10279547|17.30|-0.03|-0.17
+Encana (ECA)|9965154|11.19|-0.02|-0.18
+Walt Disney (DIS)|9925010|111.81|0.78|0.70
+Kinder Morgan (KMI)|9702153|17.92|-0.08|-0.44
+Itau Unibanco Holding ADR (ITUB)|9676596|12.44|-0.05|-0.40
+Exxon Mobil (XOM)|9643321|82.44|-0.50|-0.60
+Hewlett Packard Enterprise (HPE)|9415498|14.80|-0.10|-0.67
+Merck&Co (MRK)|9169989|56.23|0.01|0.02
+HP (HPQ)|9115473|21.42|0.13|0.61
+Kinross Gold (KGC)|8877289|4.11|0.00|0.00
+Boston Scientific (BSX)|8526726|25.49|-0.29|-1.12
+KeyCorp (KEY)|8471725|20.12|-0.04|-0.20
+Schlumberger (SLB)|8400608|64.39|0.79|1.24
+Macy's (M)|8386770|25.25|-0.60|-2.32
+Fairmount Santrol Holdings (FMSA)|8356606|5.26|-0.12|-2.23
+Altria Group (MO)|8306303|73.90|1.25|1.72
+Petroleo Brasileiro ADR (PBR)|8258282|9.62|0.01|0.10
+Energy Transfer Equity (ETE)|8240331|16.86|-0.14|-0.82
+DDR Corp (DDR)|8054940|8.75|-0.04|-0.46
+Nike Cl B (NKE)|8009008|64.24|-0.57|-0.88
+Halliburton (HAL)|7897932|45.87|0.39|0.86
+Genworth Financial Cl A (GNW)|7881951|3.17|-0.12|-3.65
+VISA Cl A (V)|7756978|112.14|-1.41|-1.24
+Ambev ADR (ABEV)|7614079|6.20|-0.01|-0.23
+Transocean (RIG)|7606472|9.44|-0.05|-0.53
+PPL (PPL)|7584509|32.42|-1.55|-4.56
+Coca-Cola (KO)|7533076|46.13|0.20|0.44
+Cleveland-Cliffs (CLF)|7439346|6.71|-0.11|-1.61
+United States Steel (X)|7435868|33.84|0.41|1.23
+MGM Resorts International (MGM)|7430999|32.84|-0.11|-0.33
+Kroger (KR)|7210124|26.95|-0.05|-0.19
+Fitbit (FIT)|7184253|6.18|-0.21|-3.29
+Teekay Tankers (TNK)|7138843|1.34|-0.14|-9.46
+Regal Entertainment Group Cl A (RGC)|7106443|22.87|0.04|0.18
+Noble (NE)|7032832|3.79|0.01|0.26
+Southern (SO)|7004291|49.81|-0.74|-1.46
+Crown Holdings (CCK)|7002057|56.53|-1.25|-2.16
+Barrick Gold (ABX)|6923228|14.25|-0.07|-0.49
+Abbott Laboratories (ABT)|6837515|56.80|0.40|0.71
+Synchrony Financial (SYF)|6672780|38.18|-0.33|-0.86
+Energy Transfer Partners (ETP)|6538135|17.44|-0.20|-1.13
+Carnival (CCL)|6443088|68.13|1.53|2.30
+Delta Air Lines (DAL)|6336316|55.75|-0.32|-0.57
+Nokia ADR (NOK)|6279464|4.67|-0.02|-0.43
+Turquoise Hill Resources (TRQ)|6273148|3.27|0.15|4.81
+Host Hotels&Resorts (HST)|6245544|20.28|-0.30|-1.46
+Och-Ziff Capital Management (OZM)|6233289|2.67|0.13|5.12
+Monsanto (MON)|6061916|116.00|-1.57|-1.34
+Noble Energy (NBL)|5899658|27.23|0.94|3.58
+Morgan Stanley (MS)|5856339|52.93|-0.31|-0.58
+Baker Hughes a GE (BHGE)|5827987|31.83|0.80|2.58
+Alcoa (AA)|5788880|46.52|1.95|4.38
+Target (TGT)|5786031|64.06|-0.02|-0.03
+Potash of Saskatchewan (POT)|5779677|19.63|0.04|0.20
