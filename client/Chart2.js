@@ -24,11 +24,11 @@ export default class Chart extends React.Component{
     }
 
     componentDidMount(){
-        axios.get('/api/getchart/jpm')
-        .then(response => {
-            store.dispatch( {type: 'bars', bars: response.data} );
-        })
-        .catch(err => con('getchart errorrrrrrrrrrrr', err) );
+        // axios.get('/api/getchart/jpm')
+        // .then(response => {
+        //     store.dispatch( {type: 'bars', bars: response.data} );
+        // })
+        // .catch(err => con('getchart errorrrrrrrrrrrr', err) );
 
         this.unsubscribeStore = store.subscribe(() => {
                 this.minRange = -1;
@@ -43,8 +43,8 @@ export default class Chart extends React.Component{
     }
 
     moveCrossHair(event){
-        var left = Number(event.pageX) - 50;
-        var top = Number(event.pageY) - 50;
+        var left = Number(event.pageX) - 72;
+        var top = Number(event.pageY) - 78;
         store.dispatch( {type: 'crossHairPos', left: left+'px', top: top+'px'} );
     }
 

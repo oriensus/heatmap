@@ -6,6 +6,10 @@ const db = require('./server/data');
 const HD = require('./server/data/historicalData');
 const Sec = require('./server/data/securities');
 
+import React from 'react';
+import store from '../store';
+
+
 
 function extractQuote(symbol, obj){
     var counter = 1;
@@ -110,3 +114,89 @@ db.sync({force: false})
     // })
 })
 .catch(err => con('db connect error', err) )
+
+
+
+
+
+
+
+
+
+
+class SingleStudent extends React.Component {
+    constructor() {
+        super();
+        this.handleUpdate = this.handleUpdate.bind(this);
+    }
+
+    handleUpdate(event) {
+        event.preventDefault();
+        const updateStudent = {
+            firstName: event.target.firstName.value,
+            lastName: event.target.lastName.value,
+            email: event.target.email.value,
+            gpa: event.target.gpa.value,
+            campusId: event.target.campus.value
+        };
+        axios.put('/api/updatestudent/' + this.props.match.params.studentid, updateStudent).then(() => this.props.history.push('/students')).catch(err => console.log('update student errorrrrrrrrr', err));
+    }
+
+    render() {
+        var student = store.getState().students.filter(student => {
+            return student.id === Number(this.props.match.params.studentid);
+        });
+        var campus = store.getState().campuses.filter(campus => {
+            return campus.id === student[0].campusId;
+        });
+        var campusList = store.getState().campuses.map(campus => {
+            if (campus.id === student[0].campusId) {
+                return React.createElement(
+                    'option',
+                    { value: campus.id, key: campus.id, selected: true },
+                    campus.campusName
+                );
+            } else {
+                return React.createElement(
+                    'option',
+                    { value: campus.id, key: campus.id },
+                    campus.campusName
+                );
+            }
+        });
+        return React.createElement(
+            'form',
+            { onSubmit: this.handleUpdate },
+            React.createElement(
+                'div',
+                null,
+                'First Name: ',
+                React.createElement('input', { name: 'firstName', type: 'text', defaultValue: student[0].firstName }),
+                ' Last Name: ',
+                React.createElement('input', { name: 'lastName', type: 'text', defaultValue: student[0].lastName })
+            ),
+            React.createElement(
+                'div',
+                null,
+                'Email: ',
+                React.createElement('input', { name: 'email', type: 'text', defaultValue: student[0].email }),
+                ' GPA: ',
+                React.createElement('input', { name: 'gpa', type: 'text', defaultValue: student[0].gpa }),
+                React.createElement(
+                    'select',
+                    { name: 'campus' },
+                    campusList
+                )
+            ),
+            React.createElement(
+                'div',
+                null,
+                React.createElement(
+                    'button',
+                    { type: 'submit' },
+                    ' Update '
+                )
+            )
+        );
+    }
+}

@@ -32,8 +32,8 @@
 #chart {
     background-color: rgb(255, 255, 255);
     position: absolute;
-    left: 50px;
-    top: 50px;
+    left: 5%;
+    top: 10%;
     border: solid;
     border-width: 1px;
     width: 90%;
@@ -58,7 +58,7 @@
     border-top: 1px dotted #000;
     border-left: 1px dotted #000;
     pointer-events: none;
-    z-index: 2;
+    z-index: 3;
   }
 
   #pxscale {
@@ -68,14 +68,24 @@
       height: 100%;
   }
 
+  #datescale {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 90%;
+    left: 5%;
+    width: 90%;
+    height: 50px;
+  }
+
   #barinfo {
       position: absolute;
       left: 5px;
       top: 5px;
       background-color: rgb(184, 201, 201);
-      border-radius: 10px;
-      width: 100px;
+      border-radius: 5px;
+      width: 120px;
       height: 120px;
+      z-index: 2;
   }
 
 #modalchartcontainer {

@@ -95,7 +95,6 @@ router.get('/getlastpx', (req, res, next) => {
 })
 
 router.get('/getchart/:symbol', (req, res, next) => {
-    con('ttttttttttttttttttttttttttt');
     historicalData.findAll( {where: {symbol: req.params.symbol.toUpperCase()}, order: [ ['id', 'DESC'] ] } )
     .then(data => res.send(data) )
     .catch(err => con('getchart errorrrrrrrr', err) );

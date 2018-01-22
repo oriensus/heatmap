@@ -3,6 +3,7 @@ import axios from 'axios';
 import { setInterval } from 'timers';
 import SingleSecurity from './SingleSecurity';
 import Chart2 from './Chart2';
+import DateScale from './DateScale';
 import store, {getBars, chartSymbol} from './store/store';
 
 const con = console.log;
@@ -16,8 +17,11 @@ export default class HeatmapGrid extends React.Component{
             securities: []
         }
         this.modalChart = rce(Chart2, null, null);
+        this.dateScale = rce(DateScale, null, null);
         this.closeModalChart = rce('span', {id: 'closemodalchart', onClick: this.onClickCloseModalChart, style: {float: 'right', color: '#aaaaaa', fontSize: '28px'} }, 'X');
         this.onClickOpenModalChart = this.onClickOpenModalChart.bind(this);
+        this.getRemoteData = this.getRemoteData.bind(this);
+        this.extractQuote = this.extractQuote.bind(this);
     }
 
     onClickCloseModalChart(){
@@ -87,11 +91,44 @@ export default class HeatmapGrid extends React.Component{
         return symbol.substring( symbol.indexOf('(') + 1, symbol.indexOf(')') )
     }
 
+    extractQuote(symbol, obj){
+        var counter = 1;
+        var keys = Object.keys(obj);
+        let data = keys.map(function(key){
+            var tempObj = {};
+            tempObj.symbol = symbol;
+            tempObj.open = obj[key]['1. open'];
+            tempObj.high = obj[key]['2. high'];
+            tempObj.low = obj[key]['3. low'];
+            tempObj.close = obj[key]['4. close'];
+            tempObj.volume = obj[key]['5. volume'];
+            tempObj.date = key;
+            return tempObj
+        })
+        store.dispatch( getBars(data.reverse()) );
+    }
+
+    getRemoteData(symbol){
+        //setTimeout(function(){con('blocking.......')}, 3000);
+        //var url = "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=" + symbol + "&interval=5min&apikey=6SQS9DKXOBSEYD7G";
+        var url = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=" + symbol + "&apikey=6SQS9DKXOBSEYD7G";
+        axios.get(url)
+        .then((response) => {
+            this.extractQuote(symbol, response.data['Time Series (Daily)']);
+        })
+        .then(() => document.getElementById('modalchartcontainer').style.display = 'block')
+        .catch(err => con('getMarketData error --- ',err) );
+    }
+
     onClickOpenModalChart(symbol){
-        axios.get('/api/getchart/' + symbol)
-        .then(response => store.dispatch( getBars(response.data) )  )
-        .then(() => document.getElementById('modalchartcontainer').style.display = 'block' )
-        .catch(err => con('getchart error in heatmap', err) );
+        //// getting data locally
+        // axios.get('/api/getchart/' + symbol)
+        // .then(response => store.dispatch( getBars(response.data) )  )
+        // .then(() => document.getElementById('modalchartcontainer').style.display = 'block' )
+        // .catch(err => con('getchart error in heatmap', err) );
+
+        //getting data from https://www.alphavantage.co
+        this.getRemoteData(symbol);
     }
 
     render(){
@@ -100,7 +137,7 @@ export default class HeatmapGrid extends React.Component{
         });
         return(
             <div className='heatmapGrid' >
-                {rce('div', {id: 'modalchartcontainer'}, this.closeModalChart, this.modalChart)}
+                {rce('div', {id: 'modalchartcontainer'}, this.closeModalChart, this.modalChart, this.dateScale)}
                 {securities}
             </div>
         )
